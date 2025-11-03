@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tranca</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        :root{
+            --ok: #198754;
+            --nok: #ff0000;
+            --bg: #182527;
+            --text-on-circle: #ffffff;
+        }
+        body, html {
+            margin: 0;
+            font: 16px "Lato", sans-serif;
+            color: #777;
+            height: 100%;
+        }
+        #fundo {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg); /* cor de fundo */
+            flex-direction: column; /* Alinha os itens em coluna */
+        }
+        #titulo-dinamico {
+            font-family: parisienne;
+            color: #ffffff; /* cor do título */
+            margin-bottom: 20px; /* espaço abaixo do título */
+        }
+        #conteudo-dinamico {
+            width: 200px;
+            height: 200px;
+            background-color: var(--ok);
+            border: var(--ok) 4px solid;
+            border-radius: 50%; /* isso faz a div ficar circular */ 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            line-height: 100px; /* centraliza o texto verticalmente */
+            color:  var(--text-on-circle); /* cor do texto */
+            font-family: Arial, sans-serif;
+            font-size: 80px;
+            transition: background-color 0.5s ease; /* transição suave para mudança de cor */
+        }
+        #status {
+            font-family: nunito bold;
+            font-size: 32px;
+            color: #198754; /* cor do status */
+            margin-top: 20px; /* espaço acima do status */
+        }
+        #paragrafo-dinamico {
+            font-family: nunito;
+            font-size: 21px;
+            color: #ffffff; /* cor do parágrafo */
+            margin-top: 20px; /* espaço acima do parágrafo */
+        }
+    </style>
+    <script src="tranca-eletronica.js" defer>
+        document.getElementById('conteudo-dinamico').innerHTML = "X";
+        document.getElementById('conteudo-dinamico').style.backgroundColor = "#ff0000"; // "#ff0000" para vermelho
+        document.getElementById('status').innerHTML = "acesso negado";
+        document.getElementById('status').style.color = "#ff0000"; // cor vermelha para acesso negado
+    </script>
+</head>
+<body>
+    <div id="fundo">
+        <h1 id="titulo-dinamico">Pequenos luxos</h1> <!-- Título acima do conteúdo -->
+        <div id="conteudo-dinamico"></div>
+        <div>
+            <h2 id="status" aria-live="polite">acesso autorizado</h2>
+            <p id="paragrafo-dinamico">Conteúdo abaixo do círculo</p> <!-- Parágrafo abaixo do conteúdo -->
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
