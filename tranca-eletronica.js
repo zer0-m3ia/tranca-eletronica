@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Exemplo: ajustar conteúdo e cor dinamicamente
     title.textContent = 'clube da luiza';
     circle.innerHTML = 'X'; // ou manter o SVG conforme necessário
-    setCircleColor('#ff0000'); // vermelho -> acesso negado
-    status.textContent = 'acesso negado';
-    status.style.color = '#ff0000';
+    setCircleColor('#ffffff'); // vermelho -> acesso negado
+    status.textContent = 'compilando acesso';
+    status.style.color = '#ffffff';
     paragraph.textContent = 'Detalhes sobre o acesso';
 
     function setCircleColor(color) {
