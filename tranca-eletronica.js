@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!circle || !status || !paragraph || !title) return;
 
     // Exemplo: ajustar conteúdo e cor dinamicamente
-    title.textContent = 'Pequenos luxos';
+    title.textContent = 'clube da luiza';
     circle.innerHTML = 'X'; // ou manter o SVG conforme necessário
     setCircleColor('#ff0000'); // vermelho -> acesso negado
     status.textContent = 'acesso negado';
